@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Primeiro Desafio</title>
+		<link rel="icon" href="Vector.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<img class="imgAlura" src="img/Vector.png">
+
+		</header>
+
+
+
+
+
+
+		<main>
+
+			<textarea cols="60" rows="10" class="textArea" placeholder="Digite seu texto"></textarea>
+
+			<div class="informacoes">
+
+				<img class="exclamacao" src="img/exclamacao.png"><p class="informacao">Apenas letras minúsculas e sem acento.</P>
+
+			</div>
+
+			<section class="botao">
+
+				<button type="button" class="botaoCriptografar">Criptografar</button>
+				<button type="button" class="botaoDescriptografar">Descriptografar</button>
+
+
+			</section>
+
+			<section class="areaCriptografia">
+				<div>
+					<textarea cols="60" rows="10" class="textoCriptografado" id="copiando"></textarea>
+					<button type="button" class="botaoCopiar">Copiar</button>
+				</div>
+			</section>
+
+			<section class="imagemDentroDaArea" id="idImagemDentroDaArea">
+				<img class="imgBusca" src="img/imgBusca.svg">
+				<h1 class="mensagemNaoEncontrada">Nenhuma mensagem encontrada</h1>
+				<p class="subTexto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+			</section>
+		</main>
+
+		<footer>
+			<h1 class="rodape">© Copyright André Chalhub - Desafio Alura</h1>
+		</footer>
+
+
+		<script>
+			function botaoCriptografar() {
+				var botaoCriptografar  = document.querySelector(".botaoCriptografar");
+				return botaoCriptografar
+			}
+
+			function botaoDescriptografar() {
+				var botaoDescriptografar  = document.querySelector(".botaoDescriptografar");
+				return botaoDescriptografar
+			}
+
+			function botaoCopiar() {
+				var botaoCopiar  = document.querySelector(".botaoCopiar");
+				return botaoCopiar
+			}
+
+			function apertandoBotaoCript() {
+				var apertandoBotaoCript = botaoCriptografar().addEventListener("click",criptografar);
+				return apertandoBotaoCript
+			}
+
+			function apertandoBotaoDescript() {
+				var apertandoBotaoDescript = botaoDescriptografar().addEventListener("click",descriptografar);
+				return apertandoBotaoDescript
+			}
+
+			function apertandoBotaoCopiar() {
+				var apertandoBotaoCopiar = botaoCopiar().addEventListener("click",copiar);
+				return apertandoBotaoCopiar
+			}
+
+			function textoColetado() {
+				var textoColetado = document.querySelector(".textArea")
+				return textoColetado
+			}
+
+			function textoEncriptogradado() {
+				var textoEncriptogradado = document.querySelector(".textoCriptografado")
+				return textoEncriptogradado
+			}
+
+			var listaCriptChave = ["e","i","a","o","u"]
+			var listaCripMap = ["enter","imes","ai","ober","ufat"]
+
+			function criptografar () {
+
+
+				console.log(textoColetado().value)
+				var novotexto = textoColetado().value.replace(/e/g,listaCripMap[0])
+				novotexto = novotexto.replace(/i/g,listaCripMap[1])
+				novotexto = novotexto.replace(/a/g,listaCripMap[2])
+				novotexto = novotexto.replace(/o/g,listaCripMap[3])
+				novotexto = novotexto.replace(/u/g,listaCripMap[4])
+				console.log(novotexto)
+
+
+
+				if (textoColetado().value != "") {
+				document.getElementById("idImagemDentroDaArea").style.display = "none";} 
+
+				textoEncriptogradado().textContent = novotexto
+				textoColetado().value = ""
+			}
+
+			function descriptografar() {
+				console.log(textoColetado().value)
+				var novotexto = textoColetado().value.replace(/enter/g,listaCriptChave[0])
+				novotexto = novotexto.replace(/imes/g,listaCriptChave[1])
+				novotexto = novotexto.replace(/ai/g,listaCriptChave[2])
+				novotexto = novotexto.replace(/ober/g,listaCriptChave[3])
+				novotexto = novotexto.replace(/ufat/g,listaCriptChave[4])
+				console.log(novotexto)
+
+				if (textoColetado().value != "") {
+				document.getElementById("idImagemDentroDaArea").style.display = "none";} 
+
+				textoEncriptogradado().textContent = novotexto
+				textoColetado().value = ""
+
+			}
+
+			function copiar() {
+				document.getElementById("copiando").select();
+				document.execCommand("copy");
+			}
+
+
+
+			apertandoBotaoCript()
+			apertandoBotaoDescript()
+			apertandoBotaoCopiar()
+
+		</script>
+
+
+	</body>
+</html>

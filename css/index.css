@@ -1,0 +1,288 @@
+/**{
+	box-sizing: border-box;
+ }
+*/
+
+body{
+
+	background: #E5E5E5;
+	
+}
+
+.imgAlura {
+	position: absolute;
+	left: 6%;
+	top: 4%;
+	bottom: 0%;
+}
+
+.textArea {
+	position: absolute;
+	width: 53%;
+	height: 50%;
+	left: 16%;
+	top: 17%;
+	background-color: #E5E5E5;
+	border-color: #E5E5E5;
+	
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+	
+	color: #0A3871;
+}
+
+.exclamacao, .informacao {
+	display:inline-block;
+
+	position: absolute;
+	left: 16%;
+	top: 73%;
+	bottom: 0%;
+
+	color: #495057;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 8px;
+}
+
+.informacao {
+	opacity: 0.8;
+	margin: 0 30px;
+}
+
+.botaoCriptografar, .botaoDescriptografar {
+	text-align: center;
+}
+
+.botaoCriptografar {
+	/* Button */
+	/* Auto layout */
+	position: absolute;
+	width: 24%;
+	height: 67px;
+	left: 14%;
+	top: 77%;
+
+	/* Dark blue/dark-blue-300 */
+
+	background: #0A3871;
+	border-radius: 24px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+	border: none;
+
+	color: white;
+}
+
+.botaoDescriptografar {
+	/* Button */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	position: absolute;
+	width: 24%;
+	height: 67px;
+	left: 39%;
+	top: 77%;
+
+	/* Light gray */
+
+	background: #D8DFE8;
+	/* Dark blue/dark-blue-300 */
+
+	border: 1px solid #0A3871;
+	border-radius: 24px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+
+	color: #0A3871;
+	
+}
+
+
+button {
+	transition: 0.5s background;
+}
+
+
+button:hover{
+	margin-top:0px;
+	border: 0;
+	background-color: rgb(61, 58, 58);
+	color: white;
+	cursor: pointer;
+}
+
+
+button:active{
+	/*margin-top:1%;
+	border: 1%;*/
+
+	transform: scale(1.07);
+	background-color: red;
+	cursor: wait;
+	
+}
+
+.textoCriptografado {
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 21%;
+	height: 73%;
+	left: 72%;
+	top: 4%;
+
+	padding: 3%;
+
+	/* White */
+	background: #FFFFFF;
+
+	/* shadow */
+
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+	border: none;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+
+}
+
+.imgBusca {
+	position: absolute;
+	width: 30%;
+	height: 33%;
+	left: 71%;
+	top: 28%;
+}
+
+.mensagemNaoEncontrada {
+	position: absolute;
+	width: 26%;
+	height: 5.6%;
+	left: 73%;
+	top: 60%;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.1em;
+	line-height: 120%;
+	/* or 29px */
+
+	text-align: center;
+
+	/* Gray/gray-500 */
+
+	color: #343A40;
+
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 16px 3px;
+}
+
+.subTexto {
+	/* Digite um texto que você deseja criptografar ou descriptografar. */
+	position: absolute;
+	width: 23.3%;
+	height: 48px;
+	left: 74%;
+	top: 65%;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 100%;
+	/* or 24px */
+
+	text-align: center;
+
+	/* Gray/gray-400 */
+
+	color: #495057;
+
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 16px 0px;
+	padding-top: 10px;
+}
+
+.botaoCopiar {
+	/* Button */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	position: absolute;
+	width: 24%;
+	height: 8%;
+	left: 72%;
+	top: 77%;
+
+	/* Light gray */
+
+	background: #D8DFE8;
+	/* Dark blue/dark-blue-300 */
+
+	border: 1px solid #0A3871;
+	border-radius: 24px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 1.5%;
+
+	color: #0A3871;
+	
+}
+
+
+footer {
+	position: fixed;
+	width: 100%;
+	top: 91.5%;
+	padding: 2%;
+	background-color: #0A3871;
+}
+
+.rodape {
+	color: #FFFFFF;
+	font: bold;
+	text-align: center;
+}
+
